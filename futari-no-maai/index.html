@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ふたりの間合い - パートナーへの配慮を支えるアプリ | Labs Morihaya</title>
+  <meta name="description" content="ふたりの間合いは、パートナーの心と体のリズムに寄り添う「配慮支援」アプリ。記録はすべて端末内で暗号化され、外部に送信されることはありません。">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* LP-specific styles (built on the shared design system) */
+    .app-hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .app-hero .app-icon {
+      margin: 0 auto 1.5rem;
+      width: 96px;
+      height: 96px;
+      font-size: 3rem;
+      border-radius: 24px;
+    }
+
+    .app-hero h1 {
+      font-size: 2.75rem;
+    }
+
+    .app-hero .hero-lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 1rem auto 0;
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--surface-border-hover);
+    }
+
+    .feature-card .feature-emoji {
+      font-size: 1.75rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .principle-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .principle-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .principle-list li::before {
+      content: "♡";
+      color: var(--primary);
+      font-weight: bold;
+      flex-shrink: 0;
+      line-height: 1.6;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="../index.html" class="logo">
+        <span>Labs</span> Morihaya
+      </a>
+      <nav>
+        <a href="../index.html">ホーム</a>
+        <a href="index.html" class="active">ふたりの間合い</a>
+        <a href="../privacy/index.html">プライバシーポリシー</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Language Selector -->
+    <div class="lang-selector">
+      <button class="lang-btn active" onclick="setLanguage('ja')">日本語</button>
+      <button class="lang-btn" onclick="setLanguage('en')">English</button>
+    </div>
+
+    <!-- ===================== Japanese Version ===================== -->
+    <div class="ja-only">
+
+      <!-- Hero -->
+      <section class="app-hero">
+        <div class="app-icon">⚖️</div>
+        <h1>ふたりの間合い</h1>
+        <p class="hero-lead">
+          パートナーの心と体のリズムにそっと寄り添うための「配慮支援」アプリ。<br>
+          大切なのは攻略ではなく、思いやり。
+        </p>
+        <div class="hero-cta">
+          <span class="btn btn-primary" style="cursor: default;">近日公開予定（Android / iOS）</span>
+          <a href="../privacy/index.html" class="btn btn-outline">プライバシーポリシー</a>
+        </div>
+      </section>
+
+      <!-- What is this app -->
+      <section class="card">
+        <h2>このアプリについて</h2>
+        <p>
+          「ふたりの間合い」は、月経周期などのデリケートな情報をもとに、その日にふさわしい労わり方（配慮レベル）や、会話のきっかけとなる声かけ例をそっと提示するアプリです。
+        </p>
+        <p>
+          相手の意思や体調をアプリが決めつけることはありません。表示されるのはあくまで一般的な傾向にもとづく参考情報です。最後に大切なのは、あなた自身の目と、ふたりの会話です。
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section>
+        <h2>主な機能</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-emoji">🏠</span>
+            <h3>ホーム</h3>
+            <p>今日の配慮レベルの目安と、自然な声かけ例を表示。毎日少しずつ変わるTipsが、日々の思いやりのヒントになります。</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">📝</span>
+            <h3>記録</h3>
+            <p>月経開始日・営み・メモを日付順に見返せるレポート画面。ふたりの歩みを静かに振り返れます。</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">📅</span>
+            <h3>声かけ目安カレンダー</h3>
+            <p>会話を始めるときの慎重さの目安を色で表示します。色は「誘ってよい日」を示すものではありません。日付ごとの記録・メモの入力もここから。</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">🔐</span>
+            <h3>設定・セキュリティ</h3>
+            <p>生体認証によるアプリロック、日本語 / English の切替、カレンダーアイコンの変更、暗号化バックアップの作成・復元。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section class="card" style="margin-top: 3rem;">
+        <h2>プライバシー最優先の設計</h2>
+        <p>
+          記録される情報は、ふたりにとって最もプライベートなもの。だからこそ、外部にデータを出さないことを設計の出発点にしています。
+        </p>
+        <div class="policy-badge-container">
+          <div class="policy-badge"><span>✓</span> アカウント登録不要</div>
+          <div class="policy-badge"><span>✓</span> 広告・解析SDKなし</div>
+          <div class="policy-badge"><span>✓</span> データは端末内でAES-GCM暗号化</div>
+          <div class="policy-badge"><span>✓</span> 生体認証ロック対応</div>
+        </div>
+        <p>
+          機種変更のためのバックアップファイルも、ユーザーが決めたパスワードで端末内で暗号化されます。当方がデータをお預かりすることは一切ありません。
+        </p>
+        <p class="disclaimer">
+          詳細は<a href="../privacy/index.html">プライバシーポリシー</a>をご覧ください。
+        </p>
+      </section>
+
+      <!-- Philosophy -->
+      <section class="card">
+        <h2>大切にしていること</h2>
+        <ul class="principle-list">
+          <li>目的は「攻略」ではなく、配慮です。</li>
+          <li>相手の意思や体調をアプリが決めることはありません。</li>
+          <li>周期の目安には個人差があります。表示は一般的な傾向にもとづく参考情報です。</li>
+          <li>迷ったら、誘う前に「今日はどう？」と確認する。それがいちばん確かな方法です。</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="card">
+        <h2>お問い合わせ</h2>
+        <p>
+          ご意見・ご要望・不具合のご報告は、お問い合わせフォームよりお気軽にお寄せください。
+        </p>
+        <a href="https://forms.gle/tt5quz4skeHgE4wp8" target="_blank" rel="noopener noreferrer" class="btn btn-outline">お問い合わせフォームを開く</a>
+      </section>
+    </div>
+
+    <!-- ===================== English Version ===================== -->
+    <div class="en-only">
+
+      <!-- Hero -->
+      <section class="app-hero">
+        <div class="app-icon">⚖️</div>
+        <h1>Futari no Maai</h1>
+        <p class="hero-lead">
+          A "care support" app that helps you stay gently attuned to your partner's physical and emotional rhythm.<br>
+          It's about thoughtfulness — not strategy.
+        </p>
+        <div class="hero-cta">
+          <span class="btn btn-primary" style="cursor: default;">Coming soon (Android / iOS)</span>
+          <a href="../privacy/index.html" class="btn btn-outline">Privacy Policy</a>
+        </div>
+      </section>
+
+      <!-- What is this app -->
+      <section class="card">
+        <h2>About the App</h2>
+        <p>
+          Futari no Maai ("the space between two people") uses sensitive records such as menstrual cycle dates to gently suggest a level of consideration for the day, along with conversation starters that help you check in with your partner.
+        </p>
+        <p>
+          The app never decides your partner's feelings or condition for you. Everything shown is reference information based on general tendencies. What matters most is your own attention — and talking with each other.
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section>
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-emoji">🏠</span>
+            <h3>Home</h3>
+            <p>See today's suggested care level and natural conversation examples, plus rotating daily tips for everyday thoughtfulness.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">📝</span>
+            <h3>Records</h3>
+            <p>Review period start dates, intimacy records, and memos in chronological order — a quiet look back at your journey together.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">📅</span>
+            <h3>Conversation-Cue Calendar</h3>
+            <p>Colors indicate how carefully to approach a conversation on a given day — they never mark a "good day to ask." Add and edit records and memos per date here.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">🔐</span>
+            <h3>Settings &amp; Security</h3>
+            <p>Biometric app lock, Japanese / English language switching, calendar icon styles, and encrypted backup &amp; restore.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section class="card" style="margin-top: 3rem;">
+        <h2>Privacy-First by Design</h2>
+        <p>
+          The records you keep are among the most private things a couple has. That's why keeping data on your device is the starting point of the design.
+        </p>
+        <div class="policy-badge-container">
+          <div class="policy-badge"><span>✓</span> No account required</div>
+          <div class="policy-badge"><span>✓</span> No ads or analytics SDKs</div>
+          <div class="policy-badge"><span>✓</span> AES-GCM encryption on device</div>
+          <div class="policy-badge"><span>✓</span> Biometric app lock</div>
+        </div>
+        <p>
+          Migration backups are encrypted on your device with a password you choose. We never receive, store, or relay your data.
+        </p>
+        <p class="disclaimer">
+          See the <a href="../privacy/index.html">Privacy Policy</a> for details.
+        </p>
+      </section>
+
+      <!-- Philosophy -->
+      <section class="card">
+        <h2>Our Principles</h2>
+        <ul class="principle-list">
+          <li>The goal is consideration, not conquest.</li>
+          <li>The app never decides your partner's feelings or condition.</li>
+          <li>Cycles vary from person to person. What the app shows is reference information based on general tendencies.</li>
+          <li>When in doubt, simply ask: "How are you feeling today?" That is always the surest way.</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="card">
+        <h2>Contact</h2>
+        <p>
+          Questions, feedback, and bug reports are always welcome via our contact form.
+        </p>
+        <a href="https://forms.gle/tt5quz4skeHgE4wp8" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Open Contact Form</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../index.html">ホーム</a>
+      <a href="index.html">ふたりの間合い</a>
+      <a href="../privacy/index.html">プライバシーポリシー</a>
+      <a href="https://forms.gle/tt5quz4skeHgE4wp8" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+    </div>
+    <p>&copy; 2026 Labs Morihaya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      // Toggle HTML lang attribute
+      document.documentElement.lang = lang;
+
+      // Update active state of buttons
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(btn => {
+        if ((lang === 'ja' && btn.textContent === '日本語') || (lang === 'en' && btn.textContent === 'English')) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
